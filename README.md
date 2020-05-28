@@ -1,5 +1,6 @@
-# geezr-keyboards
-List of keyboard key mapping files for geezr 
+# Geezr Keyboards
+
+List of keyboard key mapping files for Geezr, the Amharic/Geez locale utility software.
 
 ### File format
 
@@ -30,3 +31,24 @@ A=a
 ```
 
 This configuration assumes there is a `MybaseMap.ini` configuration file and extends it to include keymap that inverts cases for the letter `A`
+
+### Limitations
+
+The keyboard mapping has the following limitations:
+
+1. You cannot add the `=` sign as the output. But it can be used as an input.
+	* For example, `=0=Z` is a valid mapping while, `/eq==` is not.
+1. You cannot have multiple keys as an input without defining first portion of the key combination. For example,
+
+```
+usd=$
+```
+
+is invalid. The key combinations for `u` and `us` must first be defined. A correct form of the above key mapping:
+
+```
+u=u
+us=s
+usd=$
+```
+1. Comments using `;` or `#` are not allowed since they can conflict with key mappings for `;` or `#` keys.
