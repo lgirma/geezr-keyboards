@@ -38,7 +38,9 @@ The keyboard mapping has the following limitations:
 
 1. You cannot add the `=` sign as the output. But it can be used as an input.
 	* For example, `=0=Z` is a valid mapping while, `/eq==` is not.
-1. You cannot have multiple keys as an input without defining first portion of the key combination. For example,
+
+2. You cannot have multiple keys as an input without defining first portion of the key combination. For example,
+
 
 ```
 usd=$
@@ -51,4 +53,7 @@ u=u
 us=s
 usd=$
 ```
-1. Comments using `;` or `#` are not allowed since they can conflict with key mappings for `;` or `#` keys.
+
+3. Comments using `;` or `#` are not allowed since they can conflict with key mappings for `;` or `#` keys.
+
+4. You cannot have more that one character as the output. For example, `eq=EQ` is invalid.
