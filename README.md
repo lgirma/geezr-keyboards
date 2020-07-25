@@ -18,7 +18,7 @@ Here is a sample configuration
 
 ```
 [info]
-name=CaseInverter
+name=Case Inverter
 description=Case inverter for A key
 author=Geezr
 version=1.0
@@ -43,17 +43,17 @@ The keyboard mapping has the following limitations:
 
 
 ```
-usd=$
+	usd=$
 ```
 
 is invalid. The key combinations for `u` and `us` must first be defined. A correct form of the above key mapping:
 
 ```
-u=u
-us=s
-usd=$
+	u=u
+	us=s
+	usd=$
 ```
 
-3. Comments using `;` or `#` are not allowed since they can conflict with key mappings for `;` or `#` keys.
+3. Comments are not supported. Conventional INI commenting using `;` or `#` is not allowed since it will conflict with key mappings for `;` or `#` keys.
 
 4. You cannot have more that one character as the output. For example, `eq=EQ` is invalid.
