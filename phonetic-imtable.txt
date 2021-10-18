@@ -1,0 +1,466 @@
+### File header must not be modified
+### This file must be encoded into UTF-8.
+### This table under LGPL
+### comments start with ### not single #
+### Derive from the format of SCIM Table, so you can modify the table from
+### scim-tables' table
+SCIM_Generic_Table_Phrase_Library_TEXT
+VERSION_1_1
+
+### Begin Table definition.
+BEGIN_DEFINITION
+
+### License
+LICENSE 	 LGPL
+
+### An unique id to distinguish this table among others.
+### Use uuidgen to generate this kind of id.
+UUID 	 faae2a72-0085-4ea8-8314-84c3e2f2c7fa
+
+### A unique number indicates the version of this file.
+### For example the last modified date of this file.
+### This number must be less than 2^32.
+### Just make your table version-able
+SERIAL_NUMBER 	 304
+
+### ICON can be any format as long as your pygtk can recognized
+### the most widely ones are "png" and "svg", letter one is recommended
+ICON 	 geezr.svg
+
+### The default name of this table, this is needed
+NAME 	 Geezr
+
+### The local names of this table, this is optional
+### NAME.zh_CN 	 形码
+### NAME.zh_HK 	 形碼
+### NAME.zh_TW 	 形碼
+
+### Description
+DESCRIPTION 	 Input method for Ethiopic languages using the Ge'ez charset.
+
+### Supported languages of this table
+### sigle "zh_CN" just be recognized as zh_CN,
+### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
+### and "en_US, zh_CN" will be just ignored.
+LANGUAGES 	 am_ET
+
+### The author of this table
+AUTHOR 	 Leeman
+
+### Prompt string to be displayed in the status area, CN will be replaced by
+### the gettext tools in runtime as 中.
+STATUS_PROMPT 	 ET
+
+### Valid input chars.
+VALID_INPUT_CHARS 	 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.?1234567890:;\-*!
+
+### Layout
+LAYOUT 	 us
+
+### The max number of input keys for every phrase or character.
+MAX_KEY_LENGTH 	 5
+
+### Use auto_commit mode as default
+AUTO_COMMIT 	 TRUE
+
+### Use full width punctuation by default
+DEF_FULL_WIDTH_PUNCT 	 FALSE
+### Not use full width letter by default
+DEF_FULL_WIDTH_LETTER 	 FALSE
+
+### Whether user are allow to define phrase, default is true
+### You have to define the word construction rules below.
+### For input methods which do not input phrases, set this to False
+USER_CAN_DEFINE_PHRASE 	 FALSE
+
+### Whether support PinYin Mode, default is true.
+### this feature is just for Chinese, set it to False if your IM is not
+### Chinese.
+PINYIN_MODE 	 FALSE
+
+### If true then the phrases' frequencies will be adjusted dynamically
+### according your using frequency.
+DYNAMIC_ADJUST 	 FALSE 
+
+### Some characters whose frequencies should be fix all the time, e.g. 
+### some punctuations
+### NO_CHECK_CHARS 	 
+
+### Rules for constructing user defined phrase
+### "ce" stands for "ci equal", a Chinese English :), means "phrase length
+### equal to", thus ce2 -> phrase length equal to 2; and "ca" means "phrase
+### length equal or above", so ca4 -> phrase length equal or above 4.
+### p21 -> the 1st key of 2nd character in the phrase, and so on.
+### Each rule separate via ";". 
+### Example below is a complete rule-set, 
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] 	 [2,+∞], which is the range of length
+### of phrase. This have to be satisfied if you need ibus-table to build up
+### your own inputed phrase via your daily using.
+### RULES 	 ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+
+END_DEFINITION
+
+### Begin Table data.
+### Format of every line whose formated in "input_keys\tphrase\tfreq\n" is an
+### entry.
+### From left to right, the 1st column are the input key combination that you
+### entered via keyboard; the 2nd column are presented character or phrase of
+### the key combination you want; the 3rd column are frequency of the character
+### or phrase.
+BEGIN_TABLE
+a	አ	1
+au	ኡ	1
+ai	ኢ	1
+ea	ኣ	1
+ae	ኧ	1
+aie	ኤ	1
+aE	ኤ	1
+e	እ	1
+ao	ኦ	1
+A	ዐ	1
+Ae	ዕ	1
+Au	ዑ	1
+Ai	ዒ	1
+Aa	ዓ	1
+Aie	ዔ	1
+AE	ዔ	1
+Ao	ዖ	1
+he	ሀ	1
+hu	ሁ	1
+hi	ሂ	1
+ha	ሃ	1
+hie	ሄ	1
+hE	ሄ	1
+h	ህ	1
+ho	ሆ	1
+le	ለ	1
+lu	ሉ	1
+li	ሊ	1
+la	ላ	1
+lie	ሌ	1
+lE	ሌ	1
+l	ል	1
+lo	ሎ	1
+He	ሐ	1
+Hu	ሑ	1
+Hi	ሒ	1
+Ha	ሓ	1
+Hie	ሔ	1
+HE	ሔ	1
+Ho	ሖ	1
+H	ሕ	1
+hhe	ኀ	1
+hhu	ኁ	1
+hhi	ኂ	1
+hha	ኃ	1
+hhie	ኄ	1
+hhE	ኄ	1
+hh	ኅ	1
+hho	ኆ	1
+qe	ቀ	1
+qu	ቁ	1
+qi	ቂ	1
+qa	ቃ	1
+qie	ቄ	1
+qE	ቄ	1
+q	ቅ	1
+qo	ቆ	1
+we	ወ	1
+wu	ዉ	1
+wi	ዊ	1
+wa	ዋ	1
+wie	ዌ	1
+wE	ዌ	1
+w	ው	1
+wo	ዎ	1
+re	ረ	1
+ru	ሩ	1
+ri	ሪ	1
+ra	ራ	1
+rie	ሬ	1
+rE	ሬ	1
+r	ር	1
+ro	ሮ	1
+te	ተ	1
+tu	ቱ	1
+ti	ቲ	1
+ta	ታ	1
+tie	ቴ	1
+tE	ቴ	1
+t	ት	1
+to	ቶ	1
+ye	የ	1
+yu	ዩ	1
+yi	ዪ	1
+ya	ያ	1
+yie	ዬ	1
+yE	ዬ	1
+y	ይ	1
+yo	ዮ	1
+pe	ፐ	1
+pu	ፑ	1
+pi	ፒ	1
+pa	ፓ	1
+pie	ፔ	1
+pE	ፔ	1
+p	ፕ	1
+po	ፖ	1
+se	ሰ	1
+su	ሱ	1
+si	ሲ	1
+sa	ሳ	1
+sie	ሴ	1
+sE	ሴ	1
+s	ስ	1
+so	ሶ	1
+de	ደ	1
+du	ዱ	1
+di	ዲ	1
+da	ዳ	1
+die	ዴ	1
+dE	ዴ	1
+d	ድ	1
+do	ዶ	1
+fe	ፈ	1
+fu	ፉ	1
+fi	ፊ	1
+fa	ፋ	1
+fie	ፌ	1
+fE	ፌ	1
+f	ፍ	1
+fo	ፎ	1
+ge	ገ	1
+gu	ጉ	1
+gi	ጊ	1
+ga	ጋ	1
+gie	ጌ	1
+gE	ጌ	1
+g	ግ	1
+go	ጎ	1
+je	ጀ	1
+ju	ጁ	1
+ji	ጂ	1
+ja	ጃ	1
+jie	ጄ	1
+jE	ጄ	1
+j	ጅ	1
+jo	ጆ	1
+ke	ከ	1
+ku	ኩ	1
+ki	ኪ	1
+ka	ካ	1
+kie	ኬ	1
+kE	ኬ	1
+k	ክ	1
+ko	ኮ	1
+ze	ዘ	1
+zu	ዙ	1
+zi	ዚ	1
+za	ዛ	1
+zie	ዜ	1
+zE	ዜ	1
+z	ዝ	1
+zo	ዞ	1
+Ze	ዠ	1
+Zu	ዡ	1
+Zi	ዢ	1
+Za	ዣ	1
+Zie	ዤ	1
+ZE	ዤ	1
+Z	ዥ	1
+Zo	ዦ	1
+xe	ሸ	1
+xu	ሹ	1
+xi	ሺ	1
+xa	ሻ	1
+xie	ሼ	1
+xE	ሼ	1
+x	ሽ	1
+xo	ሾ	1
+ce	ቸ	1
+cu	ቹ	1
+ci	ቺ	1
+ca	ቻ	1
+cie	ቼ	1
+cE	ቼ	1
+c	ች	1
+co	ቾ	1
+Ce	ጨ	1
+Cu	ጩ	1
+Ci	ጪ	1
+Ca	ጫ	1
+Cie	ጬ	1
+CE	ጬ	1
+C	ጭ	1
+Co	ጮ	1
+ve	ቨ	1
+vu	ቩ	1
+vi	ቪ	1
+va	ቫ	1
+vie	ቬ	1
+vE	ቬ	1
+v	ቭ	1
+vo	ቮ	1
+be	በ	1
+bu	ቡ	1
+bi	ቢ	1
+ba	ባ	1
+bie	ቤ	1
+bE	ቤ	1
+b	ብ	1
+bo	ቦ	1
+ne	ነ	1
+nu	ኑ	1
+ni	ኒ	1
+na	ና	1
+nie	ኔ	1
+nE	ኔ	1
+n	ን	1
+no	ኖ	1
+me	መ	1
+mu	ሙ	1
+mi	ሚ	1
+ma	ማ	1
+mie	ሜ	1
+mE	ሜ	1
+m	ም	1
+mo	ሞ	1
+Te	ጠ	1
+Tu	ጡ	1
+Ti	ጢ	1
+Ta	ጣ	1
+Tie	ጤ	1
+TE	ጤ	1
+T	ጥ	1
+To	ጦ	1
+Pe	ጰ	1
+Pu	ጱ	1
+Pi	ጲ	1
+Pa	ጳ	1
+Pie	ጴ	1
+PE	ጴ	1
+P	ጵ	1
+Po	ጶ	1
+Se	ጸ	1
+Su	ጹ	1
+Si	ጺ	1
+Sa	ጻ	1
+Sie	ጼ	1
+SE	ጼ	1
+S	ጽ	1
+So	ጾ	1
+SSe	ፀ	1
+SSu	ፁ	1
+SSi	ፂ	1
+SSa	ፃ	1
+SSie	ፄ	1
+SSE	ፄ	1
+SS	ፅ	1
+SSo	ፆ	1
+sse	ሠ	1
+ssu	ሡ	1
+ssi	ሢ	1
+ssa	ሣ	1
+ssie	ሤ	1
+ssE	ሤ	1
+ss	ሥ	1
+sso	ሦ	1
+Ke	ኸ	1
+Ku	ኹ	1
+Ki	ኺ	1
+Ka	ኻ	1
+Kie	ኼ	1
+KE	ኼ	1
+K	ኽ	1
+Ko	ኾ	1
+Xe	ሸ	1
+Xu	ሹ	1
+Xi	ሺ	1
+Xa	ሻ	1
+Xie	ሼ	1
+XE	ሼ	1
+X	ሽ	1
+Xo	ሾ	1
+Ne	ኘ	1
+Nu	ኙ	1
+Ni	ኚ	1
+Na	ኛ	1
+Nie	ኜ	1
+NE	ኜ	1
+N	ኝ	1
+No	ኞ	1
+,	፣	1
+;	፤	1
+:	፡	1
+::	።	1
+,,	፥	1
+:-	፦	1
+??	፧	1
+;;	፨	1
+,;	፠	1
+!	!	1
+!!	¡	1
+*	*	1
+**	፞	1
+***	፟	1
+hua	ኋ	1
+que	ቈ	1
+qui	ቊ	1
+qua	ቋ	1
+quE	ቌ	1
+quie	ቌ	1
+quu	ቍ	1
+kue	ኰ	1
+kui	ኲ	1
+kua	ኳ	1
+kuE	ኴ	1
+kuie	ኴ	1
+kuu	ኵ	1
+gue	ጐ	1
+gui	ጒ	1
+gua	ጓ	1
+guE	ጔ	1
+guie	ጔ	1
+guu	ጕ	1
+hhue	ኈ	1
+hhui	ኊ	1
+hhua	ኋ	1
+hhuE	ኌ	1
+hhuie	ኌ	1
+hhuu	ኍ	1
+\	\	1
+\1	፩	1
+\2	፪	1
+\3	፫	1
+\4	፬	1
+\5	፭	1
+\6	፮	1
+\7	፯	1
+\8	፰	1
+\9	፱	1
+\10	፲	1
+\20	፳	1
+\30	፴	1
+\40	፵	1
+\50	፶	1
+\60	፷	1
+\70	፸	1
+\80	፹	1
+\90	፺	1
+\100	፻	1
+\10k	፼   1
+END_TABlE
+
+### Since some input methods use different table for every character to make
+### phrase, such as ZhengMa, they need explict define the goucima (the
+### phrase-building code for the given character), the format of every entry is
+### "character\tgoucima\n". 
+### For the input method which just use the full code as word-building code
+### just skip this field. The ibus-table will build the codes needed from
+### above TABLE.
+### if you don't need different word-building code, please comment out the
+### next few lines with ###, just like these lines you are look at now.
+### BEGIN_GOUCI
+### character_1	goucima_1
+### character_1	goucima_2
+### END_GOUCI
