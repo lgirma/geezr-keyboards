@@ -21,7 +21,7 @@ UUID 	 faae2a72-0085-4ea8-8314-84c3e2f2c7fa
 ### For example the last modified date of this file.
 ### This number must be less than 2^32.
 ### Just make your table version-able
-SERIAL_NUMBER 	 304
+SERIAL_NUMBER 	 305
 
 ### ICON can be any format as long as your pygtk can recognized
 ### the most widely ones are "png" and "svg", letter one is recommended
@@ -109,10 +109,11 @@ END_DEFINITION
 ### or phrase.
 BEGIN_TABLE
 a	አ	1
+\a	አ	1
 au	ኡ	1
 ai	ኢ	1
-ea	ኣ	1
-ae	ኧ	1
+ea	ኧ	1
+aa	ኣ	1
 aie	ኤ	1
 aE	ኤ	1
 e	እ	1
@@ -400,9 +401,9 @@ No	ኞ	1
 ,;	፠	1
 !	!	1
 !!	¡	1
-*	*	1
-**	፞	1
-***	፟	1
+\*	፞	1
+\**	፟	1
+\***	፝	1
 hua	ኋ	1
 que	ቈ	1
 qui	ቊ	1
@@ -448,7 +449,8 @@ hhuu	ኍ	1
 \80	፹	1
 \90	፺	1
 \100	፻	1
-\10k	፼   1
+\10k	፼	1
+\\	1   1
 END_TABlE
 
 ### Since some input methods use different table for every character to make

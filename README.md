@@ -66,3 +66,43 @@ is invalid. The key combinations for `u` and `us` must first be defined. A corre
 3. Comments are not supported. Conventional INI commenting using `;` or `#` is not allowed since it will conflict with key mappings for <kbd>;</kbd> or <kbd>#</kbd> keys.
 
 4. You cannot have more that one character as the output. For example, `eq=EQ` is invalid.
+
+### For ibus in Linux
+
+To use geezr in linux operating systems using ibus (tested in Ubuntu 20.04)
+
+#### 1. Install ibus and ibus-table
+
+```shell
+sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+sudo apt install ibus-table
+```
+
+#### 2. Setup ibus
+
+```shell
+ibus-setup
+```
+
+Change default keyboard input method to ibus:
+
+```shell
+im-switch -s ibus
+```
+
+#### 3. Install the Geezr input method
+
+Then, download the `phonetic-imtable.txt` on your PC and
+
+```shell
+sudo ibus-table-createdb -n /usr/share/ibus-table/tables/geezr-am.db -s phonetic-imtable.txt
+ibus-daemon -drx
+```
+
+Then, open the ibus settings using
+
+```shell
+ibus-setup
+```
+
+Then, go to `Input Method` tab and click the "Add" button. Then in the "Select an input method" dialog click on the more icon (three dots). Then, either pick `Amharic` if it is available or click `other` at the end of the list. Then add the Geezr input method.
