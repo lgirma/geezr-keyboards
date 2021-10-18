@@ -92,7 +92,7 @@ im-switch -s ibus
 
 #### 3. Install the Geezr input method
 
-Then, download the `phonetic-imtable.txt` on your PC and
+Then, download the `PhoneticGeez-ibus.txt` on your PC and
 
 ```shell
 sudo ibus-table-createdb -n /usr/share/ibus-table/tables/geezr-am.db -s phonetic-imtable.txt

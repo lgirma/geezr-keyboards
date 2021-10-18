@@ -11,80 +11,80 @@ VERSION_1_1
 BEGIN_DEFINITION
 
 ### License
-LICENSE 	 LGPL
+LICENSE = LGPL
 
 ### An unique id to distinguish this table among others.
 ### Use uuidgen to generate this kind of id.
-UUID 	 faae2a72-0085-4ea8-8314-84c3e2f2c7fa
+UUID = f3e2fae5-fc8b-4111-9452-b983f2a078ed
 
 ### A unique number indicates the version of this file.
 ### For example the last modified date of this file.
 ### This number must be less than 2^32.
 ### Just make your table version-able
-SERIAL_NUMBER 	 305
+SERIAL_NUMBER = 400
 
 ### ICON can be any format as long as your pygtk can recognized
 ### the most widely ones are "png" and "svg", letter one is recommended
-ICON 	 geezr.svg
+ICON = geezr.svg
 
 ### The default name of this table, this is needed
-NAME 	 Geezr
+NAME = Geezr Phonetic
 
 ### The local names of this table, this is optional
-### NAME.zh_CN 	 形码
-### NAME.zh_HK 	 形碼
-### NAME.zh_TW 	 形碼
+### NAME.zh_CN = 形码
+### NAME.zh_HK = 形碼
+### NAME.zh_TW = 形碼
 
 ### Description
-DESCRIPTION 	 Input method for Ethiopic languages using the Ge'ez charset.
+DESCRIPTION = Phonetic im for Ethiopic languages using Geez charset
 
 ### Supported languages of this table
 ### sigle "zh_CN" just be recognized as zh_CN,
 ### but "zh_CN, zh_HK" or more zh_XX will be recognized as zh;
 ### and "en_US, zh_CN" will be just ignored.
-LANGUAGES 	 am_ET
+LANGUAGES = am_ET
 
 ### The author of this table
-AUTHOR 	 Leeman
+AUTHOR = Leeman
 
 ### Prompt string to be displayed in the status area, CN will be replaced by
 ### the gettext tools in runtime as 中.
-STATUS_PROMPT 	 ET
+STATUS_PROMPT = ET
 
 ### Valid input chars.
-VALID_INPUT_CHARS 	 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.?1234567890:;\-*!
+VALID_INPUT_CHARS = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.?1234567890:;\-*!
 
 ### Layout
-LAYOUT 	 us
+LAYOUT = us
 
 ### The max number of input keys for every phrase or character.
-MAX_KEY_LENGTH 	 5
+MAX_KEY_LENGTH = 5
 
 ### Use auto_commit mode as default
-AUTO_COMMIT 	 TRUE
+AUTO_COMMIT = TRUE
 
 ### Use full width punctuation by default
-DEF_FULL_WIDTH_PUNCT 	 FALSE
+DEF_FULL_WIDTH_PUNCT = FALSE
 ### Not use full width letter by default
-DEF_FULL_WIDTH_LETTER 	 FALSE
+DEF_FULL_WIDTH_LETTER = FALSE
 
 ### Whether user are allow to define phrase, default is true
 ### You have to define the word construction rules below.
 ### For input methods which do not input phrases, set this to False
-USER_CAN_DEFINE_PHRASE 	 FALSE
+USER_CAN_DEFINE_PHRASE = FALSE
 
 ### Whether support PinYin Mode, default is true.
 ### this feature is just for Chinese, set it to False if your IM is not
 ### Chinese.
-PINYIN_MODE 	 FALSE
+PINYIN_MODE = FALSE
 
 ### If true then the phrases' frequencies will be adjusted dynamically
 ### according your using frequency.
-DYNAMIC_ADJUST 	 FALSE 
+DYNAMIC_ADJUST = FALSE 
 
 ### Some characters whose frequencies should be fix all the time, e.g. 
 ### some punctuations
-### NO_CHECK_CHARS 	 
+### NO_CHECK_CHARS = 
 
 ### Rules for constructing user defined phrase
 ### "ce" stands for "ci equal", a Chinese English :), means "phrase length
@@ -93,10 +93,10 @@ DYNAMIC_ADJUST 	 FALSE
 ### p21 -> the 1st key of 2nd character in the phrase, and so on.
 ### Each rule separate via ";". 
 ### Example below is a complete rule-set, 
-### becuase [2,2] ∩ [3,3] ∩ [4,+∞] 	 [2,+∞], which is the range of length
+### becuase [2,2] ∩ [3,3] ∩ [4,+∞] = [2,+∞], which is the range of length
 ### of phrase. This have to be satisfied if you need ibus-table to build up
 ### your own inputed phrase via your daily using.
-### RULES 	 ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
+### RULES = ce2:p11+p12+p21+p22;ce3:p11+p21+p22+p31;ca4:p11+p21+p31+p41
 
 END_DEFINITION
 
@@ -450,7 +450,6 @@ hhuu	ኍ	1
 \90	፺	1
 \100	፻	1
 \10k	፼	1
-\\	1   1
 END_TABlE
 
 ### Since some input methods use different table for every character to make
